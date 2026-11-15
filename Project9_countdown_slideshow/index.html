@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown and Slideshow</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <main>
+        <section class="countdown" aria-labelledby="countdown-heading">
+            <h1 id="countdown-heading">Countdown Timer</h1>
+            <label for="seconds">How many seconds would you like to set your alarm for?</label>
+            <div class="countdown-controls">
+                <input id="seconds" type="number" min="1" step="1" value="10">
+                <button id="start-countdown" type="button">Start countdown</button>
+            </div>
+            <p id="timer" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="slideshow" aria-labelledby="slideshow-heading">
+            <h2 id="slideshow-heading">A Little Slideshow</h2>
+            <div class="slides" aria-live="polite">
+                <article class="slide slide-sunrise is-active" aria-hidden="false">
+                    <div class="slide-art" aria-hidden="true"></div>
+                    <h3>Sunrise</h3>
+                    <p>A fresh start to a new day.</p>
+                </article>
+                <article class="slide slide-ocean" aria-hidden="true">
+                    <div class="slide-art" aria-hidden="true"></div>
+                    <h3>Open Water</h3>
+                    <p>Take a moment and enjoy the view.</p>
+                </article>
+                <article class="slide slide-forest" aria-hidden="true">
+                    <div class="slide-art" aria-hidden="true"></div>
+                    <h3>Quiet Forest</h3>
+                    <p>Find a little calm among the trees.</p>
+                </article>
+            </div>
+            <div class="slideshow-controls">
+                <button id="previous-slide" type="button" aria-label="Previous slide">Previous</button>
+                <div id="slide-indicators" class="slide-indicators" aria-label="Choose a slide"></div>
+                <button id="next-slide" type="button" aria-label="Next slide">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
